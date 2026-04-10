@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AW Supply Co. | Home Goods Distributor | Texas</title>
+<meta name="description" content="AW Supply Co. is a Texas-based distributor of home goods and household products. We supply quality products to retailers and marketplaces across the United States.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+
+:root{
+  --navy:   #1a2744;
+  --navy2:  #243356;
+  --blue:   #2563eb;
+  --blue2:  #1d4ed8;
+  --gray:   #f8f9fc;
+  --gray2:  #f1f3f8;
+  --border: #e2e8f0;
+  --text:   #1e293b;
+  --muted:  #64748b;
+  --muted2: #94a3b8;
+  --white:  #ffffff;
+}
+
+html{scroll-behavior:smooth;}
+
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--white);
+  color:var(--text);
+  line-height:1.6;
+}
+
+/* ── NAV ── */
+nav{
+  position:sticky;top:0;z-index:100;
+  background:var(--white);
+  border-bottom:1px solid var(--border);
+  padding:0 60px;
+  display:flex;align-items:center;justify-content:space-between;
+  height:68px;
+}
+
+.nav-logo{
+  display:flex;align-items:center;gap:12px;
+  text-decoration:none;
+}
+
+.nav-logo-mark{
+  width:36px;height:36px;
+  background:var(--navy);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:14px;
+  letter-spacing:0.05em;
+}
+
+.nav-logo-text{
+  font-size:16px;font-weight:600;
+  letter-spacing:0.02em;color:var(--navy);
+}
+
+.nav-logo-text span{
+  font-weight:300;color:var(--muted);
+  margin-left:2px;font-size:14px;
+}
+
+.nav-links{
+  display:flex;align-items:center;
+  gap:36px;list-style:none;
+}
+
+.nav-links a{
+  font-size:14px;font-weight:400;
+  color:var(--muted);text-decoration:none;
+  transition:color 0.2s;
+}
+
+.nav-links a:hover{color:var(--text);}
+
+.nav-cta{
+  font-size:13px;font-weight:500;
+  background:var(--navy);color:#fff;
+  padding:9px 22px;text-decoration:none;
+  transition:background 0.2s;
+  border-radius:3px;
+}
+
+.nav-cta:hover{background:var(--navy2);}
+
+/* ── HERO ── */
+.hero{
+  background:var(--navy);
+  padding:90px 60px;
+  position:relative;overflow:hidden;
+}
+
+.hero::before{
+  content:'';position:absolute;
+  top:-100px;right:-100px;
+  width:500px;height:500px;
+  border-radius:50%;
+  background:rgba(37,99,235,0.08);
+  pointer-events:none;
+}
+
+.hero::after{
+  content:'';position:absolute;
+  bottom:-80px;left:-80px;
+  width:300px;height:300px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.03);
+  pointer-events:none;
+}
+
+.hero-inner{
+  max-width:680px;position:relative;z-index:1;
+}
+
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(37,99,235,0.15);
+  border:1px solid rgba(37,99,235,0.25);
+  color:#93c5fd;
+  font-size:12px;font-weight:500;letter-spacing:0.08em;
+  text-transform:uppercase;padding:5px 14px;
+  border-radius:2px;margin-bottom:28px;
+}
+
+.hero-tag-dot{
+  width:6px;height:6px;border-radius:50%;
+  background:#3b82f6;
+}
+
+.hero h1{
+  font-size:clamp(36px,5vw,56px);
+  font-weight:600;line-height:1.15;
+  color:#fff;margin-bottom:20px;
+  letter-spacing:-0.02em;
+}
+
+.hero h1 em{
+  font-style:normal;color:#93c5fd;
+}
+
+.hero-sub{
+  font-size:16px;font-weight:300;
+  color:rgba(255,255,255,0.65);
+  line-height:1.8;margin-bottom:40px;
+  max-width:520px;
+}
+
+.hero-btns{
+  display:flex;gap:14px;flex-wrap:wrap;
+}
+
+.btn-primary{
+  font-size:14px;font-weight:500;
+  background:var(--blue);color:#fff;
+  padding:13px 28px;text-decoration:none;
+  border-radius:3px;transition:background 0.2s;
+  border:none;cursor:pointer;
+}
+
+.btn-primary:hover{background:var(--blue2);}
+
+.btn-secondary{
+  font-size:14px;font-weight:400;
+  background:transparent;color:rgba(255,255,255,0.75);
+  padding:13px 28px;text-decoration:none;
+  border-radius:3px;transition:all 0.2s;
+  border:1px solid rgba(255,255,255,0.2);
+}
+
+.btn-secondary:hover{
+  background:rgba(255,255,255,0.06);
+  color:#fff;
+}
+
+.hero-stats{
+  display:flex;gap:48px;flex-wrap:wrap;
+  margin-top:60px;
+  padding-top:40px;
+  border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.hero-stat-val{
+  font-size:28px;font-weight:600;color:#fff;
+  margin-bottom:4px;
+}
+
+.hero-stat-label{
+  font-size:12px;font-weight:400;
+  color:rgba(255,255,255,0.45);
+  letter-spacing:0.06em;text-transform:uppercase;
+}
+
+/* ── SECTION SHARED ── */
+section{padding:80px 60px;}
+
+.section-tag{
+  font-size:11px;font-weight:600;
+  letter-spacing:0.14em;text-transform:uppercase;
+  color:var(--blue);margin-bottom:14px;
+}
+
+.section-title{
+  font-size:clamp(26px,4vw,38px);
+  font-weight:600;line-height:1.2;
+  color:var(--navy);margin-bottom:16px;
+  letter-spacing:-0.02em;
+}
+
+.section-sub{
+  font-size:15px;font-weight:400;
+  color:var(--muted);line-height:1.8;
+  max-width:560px;
+}
+
+/* ── ABOUT ── */
+.about{background:var(--gray);}
+
+.about-inner{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:80px;align-items:center;
+}
+
+.about-text p{
+  font-size:15px;color:var(--muted);
+  line-height:1.9;margin-bottom:16px;
+}
+
+.about-text p:last-child{margin-bottom:0;}
+
+.about-features{
+  display:flex;flex-direction:column;gap:20px;
+}
+
+.about-feature{
+  background:var(--white);
+  border:1px solid var(--border);
+  border-left:3px solid var(--blue);
+  padding:20px 24px;
+  border-radius:0 4px 4px 0;
+}
+
+.about-feature-title{
+  font-size:14px;font-weight:600;
+  color:var(--navy);margin-bottom:6px;
+}
+
+.about-feature-desc{
+  font-size:13px;color:var(--muted);
+  line-height:1.7;
+}
+
+/* ── PRODUCTS / CATEGORIES ── */
+.products{background:var(--white);}
+
+.products-header{
+  text-align:center;
+  max-width:600px;margin:0 auto 56px;
+}
+
+.products-header .section-sub{margin:0 auto;}
+
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:2px;
+}
+
+.product-card{
+  background:var(--gray);
+  padding:36px 32px;
+  transition:background 0.2s;
+  position:relative;
+  border:1px solid var(--border);
+}
+
+.product-card:hover{background:var(--gray2);}
+
+.product-icon{
+  width:44px;height:44px;
+  background:var(--navy);
+  border-radius:6px;
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:20px;
+  font-size:20px;
+}
+
+.product-card-title{
+  font-size:16px;font-weight:600;
+  color:var(--navy);margin-bottom:10px;
+}
+
+.product-card-desc{
+  font-size:13px;color:var(--muted);
+  line-height:1.8;
+}
+
+/* ── WHY US ── */
+.why{background:var(--navy);}
+
+.why-inner{
+  display:grid;
+  grid-template-columns:1fr 2fr;
+  gap:80px;align-items:start;
+}
+
+.why .section-title{color:#fff;}
+.why .section-sub{color:rgba(255,255,255,0.55);}
+.why .section-tag{color:#93c5fd;}
+
+.why-list{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:24px;
+}
+
+.why-item{
+  background:rgba(255,255,255,0.04);
+  border:1px solid rgba(255,255,255,0.07);
+  padding:28px;
+  border-radius:4px;
+}
+
+.why-item-num{
+  font-size:11px;font-weight:600;
+  letter-spacing:0.12em;color:#3b82f6;
+  margin-bottom:12px;text-transform:uppercase;
+}
+
+.why-item-title{
+  font-size:15px;font-weight:600;
+  color:#fff;margin-bottom:8px;
+}
+
+.why-item-desc{
+  font-size:13px;color:rgba(255,255,255,0.5);
+  line-height:1.8;
+}
+
+/* ── PROCESS ── */
+.process{background:var(--gray);}
+
+.process-steps{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:2px;
+  margin-top:56px;
+}
+
+.process-step{
+  background:var(--white);
+  padding:32px 28px;
+  border:1px solid var(--border);
+  position:relative;
+}
+
+.step-num{
+  font-size:36px;font-weight:700;
+  color:var(--border);line-height:1;
+  margin-bottom:16px;
+  font-family:'Playfair Display',serif;
+}
+
+.step-title{
+  font-size:15px;font-weight:600;
+  color:var(--navy);margin-bottom:10px;
+}
+
+.step-desc{
+  font-size:13px;color:var(--muted);
+  line-height:1.8;
+}
+
+/* ── CONTACT ── */
+.contact{background:var(--white);}
+
+.contact-inner{
+  display:grid;
+  grid-template-columns:1fr 1.4fr;
+  gap:80px;align-items:start;
+}
+
+.contact-info-item{
+  display:flex;flex-direction:column;gap:4px;
+  padding:20px 0;
+  border-bottom:1px solid var(--border);
+}
+
+.contact-info-item:first-child{padding-top:0;}
+.contact-info-item:last-child{border-bottom:none;}
+
+.contact-info-label{
+  font-size:11px;font-weight:600;
+  letter-spacing:0.12em;text-transform:uppercase;
+  color:var(--muted2);
+}
+
+.contact-info-val{
+  font-size:15px;font-weight:500;color:var(--navy);
+}
+
+.contact-info-sub{
+  font-size:13px;color:var(--muted);
+}
+
+/* FORM */
+.contact-form{
+  background:var(--gray);
+  border:1px solid var(--border);
+  padding:40px;
+  border-radius:4px;
+}
+
+.form-title{
+  font-size:18px;font-weight:600;
+  color:var(--navy);margin-bottom:6px;
+}
+
+.form-sub{
+  font-size:13px;color:var(--muted);
+  margin-bottom:28px;
+}
+
+.form-row{margin-bottom:18px;}
+
+.form-row-2{
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:14px;margin-bottom:18px;
+}
+
+label{
+  display:block;
+  font-size:12px;font-weight:500;
+  letter-spacing:0.06em;text-transform:uppercase;
+  color:var(--muted);margin-bottom:7px;
+}
+
+input,textarea,select{
+  width:100%;
+  background:var(--white);
+  border:1px solid var(--border);
+  color:var(--text);
+  font-family:'Inter',sans-serif;
+  font-size:14px;
+  padding:11px 14px;
+  border-radius:3px;
+  outline:none;
+  transition:border-color 0.2s;
+  appearance:none;
+}
+
+input:focus,textarea:focus,select:focus{
+  border-color:#2563eb;
+  box-shadow:0 0 0 3px rgba(37,99,235,0.08);
+}
+
+input::placeholder,textarea::placeholder{color:var(--muted2);}
+
+textarea{height:110px;resize:vertical;}
+
+select option{background:#fff;}
+
+.form-submit{
+  width:100%;
+  font-family:'Inter',sans-serif;
+  font-size:14px;font-weight:500;
+  background:var(--navy);color:#fff;
+  border:none;padding:13px;
+  border-radius:3px;cursor:pointer;
+  transition:background 0.2s;
+  margin-top:4px;
+}
+
+.form-submit:hover{background:var(--navy2);}
+
+.form-success{
+  display:none;
+  background:#f0fdf4;
+  border:1px solid #bbf7d0;
+  color:#15803d;
+  font-size:13px;
+  padding:14px 18px;
+  border-radius:3px;
+  margin-top:14px;
+}
+
+/* ── FOOTER ── */
+footer{
+  background:var(--navy);
+  padding:48px 60px;
+  display:flex;align-items:center;
+  justify-content:space-between;
+  flex-wrap:wrap;gap:20px;
+  border-top:1px solid rgba(255,255,255,0.06);
+}
+
+.footer-logo{
+  display:flex;align-items:center;gap:10px;
+}
+
+.footer-logo-mark{
+  width:30px;height:30px;
+  background:rgba(255,255,255,0.1);
+  display:flex;align-items:center;justify-content:center;
+  color:#fff;font-weight:700;font-size:12px;
+}
+
+.footer-logo-text{
+  font-size:14px;font-weight:500;color:#fff;
+  letter-spacing:0.04em;
+}
+
+.footer-copy{
+  font-size:12px;color:rgba(255,255,255,0.35);
+  letter-spacing:0.04em;
+}
+
+.footer-links{
+  display:flex;gap:28px;list-style:none;
+}
+
+.footer-links a{
+  font-size:13px;color:rgba(255,255,255,0.45);
+  text-decoration:none;transition:color 0.2s;
+}
+
+.footer-links a:hover{color:rgba(255,255,255,0.8);}
+
+/* ── RESPONSIVE ── */
+@media(max-width:900px){
+  nav{padding:0 24px;}
+  .hero,.about,.products,.why,.process,.contact{padding:60px 24px;}
+  footer{padding:36px 24px;}
+  .about-inner,.contact-inner{grid-template-columns:1fr;gap:40px;}
+  .why-inner{grid-template-columns:1fr;gap:40px;}
+  .product-grid{grid-template-columns:1fr 1fr;}
+  .process-steps{grid-template-columns:1fr 1fr;}
+  .why-list{grid-template-columns:1fr;}
+  .nav-links{display:none;}
+  .form-row-2{grid-template-columns:1fr;}
+  .hero-stats{gap:32px;}
+}
+
+@media(max-width:560px){
+  .product-grid{grid-template-columns:1fr;}
+  .process-steps{grid-template-columns:1fr;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">
+    <div class="nav-logo-mark">AW</div>
+    <div class="nav-logo-text">AW Supply <span>Co.</span></div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#process">How It Works</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a href="#contact" class="nav-cta">Get in Touch</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag"><div class="hero-tag-dot"></div>Texas-Based Distributor</div>
+    <h1>Quality Home Goods,<br><em>Delivered with Confidence</em></h1>
+    <p class="hero-sub">AW Supply Co. is a trusted distributor of home goods and household products, serving retail partners and marketplace channels across the United States.</p>
+    <div class="hero-btns">
+      <a href="#products" class="btn-primary">View Our Categories</a>
+      <a href="#contact" class="btn-secondary">Partner With Us</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-val">1,000+</div>
+        <div class="hero-stat-label">Products Distributed</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">U.S.</div>
+        <div class="hero-stat-label">Nationwide Reach</div>
+      </div>
+      <div>
+        <div class="hero-stat-val">Texas</div>
+        <div class="hero-stat-label">Headquarters</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-inner">
+    <div class="about-text">
+      <div class="section-tag">About AW Supply Co.</div>
+      <h2 class="section-title">A Reliable Partner for Retail Distribution</h2>
+      <p>AW Supply Co. is a Texas-based wholesale distributor specializing in home goods and household products. We work with established brands and emerging product lines to bring quality merchandise to retail channels and online marketplaces nationwide.</p>
+      <p>Our team brings deep expertise in supply chain logistics, product sourcing, and retail compliance — allowing our partners to move product efficiently and confidently at scale.</p>
+      <p>We maintain rigorous standards for product quality, documentation, and fulfillment to ensure every order meets the expectations of our retail partners.</p>
+    </div>
+    <div class="about-features">
+      <div class="about-feature">
+        <div class="about-feature-title">Verified Wholesale Distributor</div>
+        <div class="about-feature-desc">AW Supply Co. operates as a registered business entity in the State of Texas, maintaining full compliance with wholesale distribution standards and retail partner requirements.</div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-title">Established Supply Chain</div>
+        <div class="about-feature-desc">Our sourcing network and logistics infrastructure allow us to fulfill orders consistently, with proper documentation, invoicing, and traceability at every step.</div>
+      </div>
+      <div class="about-feature">
+        <div class="about-feature-title">Retail-Ready Products</div>
+        <div class="about-feature-desc">Every product we distribute is vetted for quality, compliance, and market readiness — ensuring our retail partners receive merchandise that meets platform and consumer expectations.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section class="products" id="products">
+  <div class="products-header">
+    <div class="section-tag">Product Categories</div>
+    <h2 class="section-title">What We Distribute</h2>
+    <p class="section-sub">AW Supply Co. carries a broad catalog of home goods and household products across multiple categories, sourced from established manufacturers and brand partners.</p>
+  </div>
+  <div class="product-grid">
+    <div class="product-card">
+      <div class="product-icon">🏠</div>
+      <div class="product-card-title">Home Organization</div>
+      <p class="product-card-desc">Storage solutions, shelving systems, closet organizers, and space-saving products for every area of the home.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">🧹</div>
+      <div class="product-card-title">Cleaning Supplies</div>
+      <p class="product-card-desc">Household cleaning tools, solutions, mops, brooms, and sanitation products for residential and light commercial use.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">🛁</div>
+      <div class="product-card-title">Bath & Bedding</div>
+      <p class="product-card-desc">Towels, bath accessories, bedding sets, pillows, and comfort essentials for bedroom and bathroom.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">🍳</div>
+      <div class="product-card-title">Kitchen & Dining</div>
+      <p class="product-card-desc">Cookware, kitchen tools, small appliances, food storage, and dining accessories for everyday use.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">💡</div>
+      <div class="product-card-title">Lighting & Hardware</div>
+      <p class="product-card-desc">Indoor and outdoor lighting, fixtures, batteries, and general household hardware items.</p>
+    </div>
+    <div class="product-card">
+      <div class="product-icon">🌿</div>
+      <div class="product-card-title">Seasonal & Garden</div>
+      <p class="product-card-desc">Outdoor living products, garden tools, seasonal décor, and patio accessories for year-round use.</p>
+    </div>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="why">
+  <div class="why-inner">
+    <div>
+      <div class="section-tag">Why AW Supply</div>
+      <h2 class="section-title">Built for Retail Partnership</h2>
+      <p class="section-sub">We understand the requirements of today's retail landscape and operate accordingly — with documentation, compliance, and reliability at the core of everything we do.</p>
+    </div>
+    <div class="why-list">
+      <div class="why-item">
+        <div class="why-item-num">01</div>
+        <div class="why-item-title">Documented & Compliant</div>
+        <p class="why-item-desc">All products come with proper sourcing documentation, invoicing, and compliance records to satisfy platform and retail partner verification requirements.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-num">02</div>
+        <div class="why-item-title">Consistent Fulfillment</div>
+        <p class="why-item-desc">Our logistics operations are designed for reliable, on-time delivery with accurate order processing and shipment tracking at every stage.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-num">03</div>
+        <div class="why-item-title">Scalable Volume</div>
+        <p class="why-item-desc">Whether you need a small initial order or high-volume ongoing supply, we scale our operations to meet your demand without compromising quality or timeline.</p>
+      </div>
+      <div class="why-item">
+        <div class="why-item-num">04</div>
+        <div class="why-item-title">Dedicated Support</div>
+        <p class="why-item-desc">Our team provides direct, responsive communication with every partner — no automated runarounds, just clear answers and proactive service.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="process" id="process">
+  <div class="section-tag">How It Works</div>
+  <h2 class="section-title">Simple. Straightforward. Reliable.</h2>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-title">Submit an Inquiry</div>
+      <p class="step-desc">Fill out our contact form with your business details and product needs. We'll review your inquiry and respond promptly.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-title">Review & Qualification</div>
+      <p class="step-desc">Our team reviews your request and confirms product availability, pricing, and any platform-specific compliance requirements.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-title">Agreement & Documentation</div>
+      <p class="step-desc">We provide all necessary documentation, invoicing, and sourcing records required for retail platform onboarding and verification.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-title">Fulfillment & Delivery</div>
+      <p class="step-desc">Orders are processed, packaged, and shipped with full tracking. We maintain an ongoing relationship to support future orders and growth.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <div>
+      <div class="section-tag">Contact Us</div>
+      <h2 class="section-title">Let's Work Together</h2>
+      <p class="section-sub" style="margin-bottom:40px;">Reach out with your business inquiry and a member of our team will get back to you within one business day.</p>
+      <div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Headquarters</div>
+          <div class="contact-info-val">Texas, United States</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Business Type</div>
+          <div class="contact-info-val">Wholesale Distributor</div>
+          <div class="contact-info-sub">Home Goods & Household Products</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Service Area</div>
+          <div class="contact-info-val">Nationwide — United States</div>
+        </div>
+        <div class="contact-info-item">
+          <div class="contact-info-label">Response Time</div>
+          <div class="contact-info-val">Within 1 Business Day</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="contact-form">
+      <div class="form-title">Send Us a Message</div>
+      <div class="form-sub">All fields marked are required. We treat all inquiries with complete confidentiality.</div>
+
+      <form id="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="3d62a74c-ed14-40db-b299-3417d2cb3c33">
+        <input type="hidden" name="subject" value="AW Supply Co. — New Business Inquiry">
+        <input type="checkbox" name="botcheck" style="display:none">
+
+        <div class="form-row-2">
+          <div class="form-row" style="margin-bottom:0;">
+            <label>First Name</label>
+            <input type="text" name="first_name" required placeholder="John">
+          </div>
+          <div class="form-row" style="margin-bottom:0;">
+            <label>Last Name</label>
+            <input type="text" name="last_name" required placeholder="Smith">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <label>Business / Company Name</label>
+          <input type="text" name="company" required placeholder="Your company name">
+        </div>
+
+        <div class="form-row">
+          <label>Email Address</label>
+          <input type="email" name="email" required placeholder="you@company.com">
+        </div>
+
+        <div class="form-row">
+          <label>Phone Number</label>
+          <input type="tel" name="phone" placeholder="(000) 000-0000">
+        </div>
+
+        <div class="form-row">
+          <label>Nature of Inquiry</label>
+          <select name="inquiry_type">
+            <option value="">Select one...</option>
+            <option>Wholesale Partnership</option>
+            <option>Product Sourcing</option>
+            <option>Platform Verification / Documentation</option>
+            <option>Pricing & Availability</option>
+            <option>Other</option>
+          </select>
+        </div>
+
+        <div class="form-row">
+          <label>Message</label>
+          <textarea name="message" required placeholder="Tell us about your business and what you're looking for..."></textarea>
+        </div>
+
+        <button type="submit" class="form-submit">Submit Inquiry</button>
+        <div class="form-success" id="form-success">✓ Your inquiry has been received. We'll be in touch within one business day.</div>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-logo">
+    <div class="footer-logo-mark">AW</div>
+    <div class="footer-logo-text">AW Supply Co.</div>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="footer-copy">© 2026 AW Supply Co. · Texas, USA · All Rights Reserved</div>
+</footer>
+
+<script>
+document.getElementById('contact-form').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = this.querySelector('.form-submit');
+  btn.textContent = 'Sending...'; btn.disabled = true;
+  try {
+    const res = await fetch('https://api.web3forms.com/submit', { method: 'POST', body: new FormData(this) });
+    const json = await res.json();
+    if (json.success) {
+      document.getElementById('form-success').style.display = 'block';
+      this.reset(); btn.textContent = 'Submitted ✓';
+    } else { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+  } catch { btn.textContent = 'Error — Try Again'; btn.disabled = false; }
+});
+
+// smooth scroll
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const t = document.querySelector(a.getAttribute('href'));
+    if(t) t.scrollIntoView({ behavior: 'smooth' });
+  });
+});
+</script>
+</body>
+</html>
